@@ -15,6 +15,10 @@ class ContactForm extends Component {
     name: '',
     number: '',
   };
+  static propTypes = {
+    onSubmitData: PropTypes.func.isRequired,
+    contacts: PropTypes.array.isRequired,
+  };
 
   onHandleSubmit = e => {
     e.preventDefault();
@@ -102,9 +106,9 @@ class ContactForm extends Component {
   }
 }
 
-ContactForm.propTypes = {
-  onSubmitData: PropTypes.func.isRequired,
-  contacts: PropTypes.array.isRequired,
-};
+// ContactForm.propTypes = {
+//   onSubmitData: PropTypes.func.isRequired,
+//   contacts: PropTypes.array.isRequired,
+// };
 
 export { ContactForm };
